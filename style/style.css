@@ -1,0 +1,611 @@
+/* GENERAL STYLES */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: white;
+}
+
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    background-color: white;
+    background-image: linear-gradient(#ffffff, #67adc9, #007dbc, #182a4a, #182a4a);
+}
+
+h1,
+h2 {
+    color: #007dbc;
+    text-align: center;
+}
+
+h3 {
+    color: #D54215;
+
+}
+
+p {
+    letter-spacing: 0.02em;
+}
+
+/*helps with overflow on pictures*/
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    max-height: 100%;
+    max-width: 100%;
+}
+
+header {
+    overflow: hidden;
+
+    background-color: white;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 99;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+}
+
+header li {
+    display: inline-block;
+    margin-right: 1.2em;
+    list-style-type: none;
+}
+
+header a {
+    display: block;
+    padding: 0.5em 1em;
+
+    text-transform: uppercase;
+    line-height: 2em;
+    letter-spacing: 0.03em;
+
+    font-weight: bold;
+}
+
+header a:link {
+    color: #D54215;
+}
+
+header a:visited {
+    color: #D54215;
+}
+
+header a:hover {
+    color: #007dbc;
+}
+
+header a:active {
+    color: black;
+}
+
+header img {
+    float: left;
+
+    margin: 10px 15px 15px 10px;
+
+    width: 50px;
+    height: auto;
+}
+
+nav {
+    float: right;
+}
+
+/* MULTIPLE PAGES */
+.game,
+.contact,
+.reflection {
+    margin: 2% 2%;
+}
+
+.home img {
+    max-width: 80%;
+}
+
+.game.pic img,
+.contact img {
+    max-width: 70%;
+}
+
+a:link {
+    color: #007dbc;
+}
+
+a:visited {
+    color: #D54215;
+}
+
+a:hover {
+    color: lightblue;
+}
+
+a:active {
+    color: #f2977a;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* HOME */
+.container_2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    background-color: white;
+
+    grid-template-areas:
+        "top_heading top_heading"
+        "ocean .";
+
+    padding: 5% 5%;
+
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+div.container_2.game {
+    grid-template-areas:
+        "top_heading top_heading"
+        ". ."
+        "ocean .";
+}
+
+.container_2 h2 {
+    text-align: left;
+}
+
+.ocean {
+    grid-area: ocean;
+}
+
+.top_heading {
+    grid-area: top_heading;
+}
+
+.home {
+    background-image: linear-gradient(#ffffff, #67adc9, #007dbc, #182a4a);
+    color: white;
+
+    grid-template-rows: 80vh;
+}
+
+.home h1 {
+    color: white;
+    font-size: 5em;
+    text-align: left;
+}
+
+.home p {
+    font-size: 20px;
+}
+
+/* GAME */
+.visit a {
+    display: grid;
+
+    background-color: #f2977a;
+    color: black;
+    text-align: center;
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 6px;
+    margin: 3% auto;
+    width: 30%;
+}
+
+.game h2,
+.game h3 {
+    text-align: center;
+}
+
+.game_need {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.game_need img {
+    width: 50px;
+    height: auto;
+}
+
+figure {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    padding: 2%;
+    border: 1px solid #f2977a;
+    border-collapse: collapse;
+}
+
+/*padding correlates with td*/
+table.points th {
+    padding-left: 3%;
+}
+
+table.points td {
+    padding: 2% 8% 2% 3%;
+    width: 50%;
+
+    border: 1px solid #f2977a;
+}
+
+.hashtag {
+    display: grid;
+    background-color: #f2977a;
+    font-weight: bold;
+    color: black;
+
+    text-align: center;
+}
+
+/* CONTACT */
+fieldset {
+    border: 1px solid #f2977a;
+}
+
+input[type=text],
+textarea {
+    width: 100%;
+}
+
+textarea {
+    height: 10em;
+}
+
+input[type=text],
+input[type=comment],
+input[type=radio],
+input[type=submit] {
+    cursor: pointer;
+}
+
+input[type=comment],
+input[type=radio],
+input[type=submit] {
+    background-color: #f2977a;
+
+    padding: 1em 2em;
+    margin: 0.25em 0.125em;
+}
+
+input[type=submit] {
+    font-weight: bold;
+    border: none;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ABOUT */
+.reflection {
+    background-color: white;
+    text-align: left;
+    padding: 5%;
+}
+
+.reflection h1,
+.reflection h2 {
+    text-align: left;
+}
+
+.reflection ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+caption {
+    margin-bottom: 1%;
+}
+
+/* FOOTER */
+footer {
+    background-color: #182a4a;
+    color: white;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+
+    grid-template-areas:
+        ". ."
+        "copyright copyright";
+
+    justify-items: stretch;
+    align-items: start;
+
+    padding: 1% 2% 0 2%;
+}
+
+.copyright {
+    grid-area: copyright;
+
+    text-align: center;
+    font-size: small;
+}
+
+footer h2 {
+    font-size: 17px;
+    color: white;
+    text-align: left;
+}
+
+/*NTNU logo*/
+footer img {
+    max-width: 200px;
+    margin-left: 0;
+}
+
+/*google maps*/
+footer iframe {
+    width: 100%;
+
+    border: 1px solid #182a4a;
+}
+
+
+/*link wont work if not all are present*/
+footer a:link {
+    color: #f2977a;
+}
+
+footer a:visited {
+    color: white;
+}
+
+footer a:hover {
+    color: lightblue;
+}
+
+footer a:active {
+    color: #f2977a;
+}
+
+/* scroll up button */
+.back-up {
+    text-align: right;
+}
+
+
+
+/* OCEAN ANIMATION */
+/*styling of the background*/
+.ocean {
+    position: relative;
+    background-image: linear-gradient(#ffffff, #67adc9, #007dbc, #182a4a);
+
+    height: 27em;
+    width: 27em;
+
+    border-radius: 69% 31% 70% 30% / 37% 35% 65% 63%;
+}
+
+div.ocean.two {
+    height: 20em;
+    width: 20em;
+}
+
+.ocean img {
+    display: inline;
+    margin-top: 30%;
+    margin-left: 15%;
+}
+
+/*styling of the bubbles*/
+.bubble {
+    border-radius: 100%;
+    position: absolute;
+    background-color: white;
+    bottom: -20px;
+    opacity: 0.2;
+    animation: bubble 15s ease-in-out infinite,
+        sideWays 4s ease-in-out infinite alternate;
+}
+
+@keyframes bubble {
+    0% {
+        transform: translateY(0%);
+        opacity: 0.06;
+    }
+
+    100% {
+        transform: translateY(-50vh);
+    }
+}
+
+@keyframes sideWays {
+    0% {
+        margin-left: 0px;
+    }
+
+    100% {
+        margin-left: 100px;
+    }
+}
+
+.bubble1 {
+    left: 10%;
+    animation-delay: 0.5s;
+    animation-duration: 46s;
+    opacity: 0.2;
+}
+
+.bubble2 {
+    width: 15px;
+    height: 15px;
+    left: 40%;
+    animation-delay: 1s;
+    animation-duration: 40s;
+    opacity: 0.1;
+}
+
+.bubble3 {
+    width: 10px;
+    height: 10px;
+    left: 30%;
+    animation-delay: 5s;
+    animation-duration: 50s;
+    opacity: 0.3;
+}
+
+.bubble4 {
+    width: 30px;
+    height: 30px;
+    left: 60%;
+    animation-delay: 10s;
+    animation-duration: 34s;
+    opacity: 0.1;
+}
+
+.bubble5 {
+    width: 10px;
+    height: 10px;
+    left: 80%;
+    animation-delay: 3s;
+    animation-duration: 60s;
+    opacity: 0.4;
+}
+
+.bubble6 {
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    bottom: 40px;
+    animation-delay: -5s;
+    animation-duration: 42s;
+    opacity: 0.2;
+}
+
+.bubble7 {
+    width: 40px;
+    height: 40px;
+    left: 30%;
+    bottom: 40px;
+    animation-delay: -21s;
+    animation-duration: 48s;
+    opacity: 0.3;
+}
+
+.bubble8 {
+    width: 30px;
+    height: 30px;
+    left: 60%;
+    bottom: 40px;
+    animation-delay: -13.75s;
+    animation-duration: 40s;
+    opacity: 0.3;
+}
+
+/*Code inspired from: https://www.webtopic.com/css-wave-animation-examples/*/
+/*It is modified and understood*/
+
+
+
+/*MOBILE VERSION*/
+@media screen and (max-width: 950px) {
+
+    h1,
+    .home h1,
+    .home,
+    .game_need {
+        text-align: center;
+    }
+
+    .container_2,
+    div.container_2.game,
+    .footer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .home {
+        grid-template-rows: 40vh;
+    }
+
+    .container_2 {
+        grid-template-areas:
+            "top_heading"
+            "ocean"
+            ".";
+    }
+
+    div.container_2.game {
+        grid-template-areas:
+            "top_heading"
+            "."
+            "."
+            "ocean";
+    }
+
+    .footer {
+        grid-template-areas:
+            "."
+            "."
+            "copyright";
+
+        padding: 5% 5% 0 5%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h2 {
+        text-align: center;
+    }
+
+    /*changing the navbar to be vertical and stay at the top of the page*/
+    header {
+        position: relative;
+        text-align: center;
+    }
+
+    header li {
+        display: block;
+        margin-right: 0;
+    }
+
+    header img {
+        float: none;
+
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    nav {
+        float: none;
+    }
+
+    .game_need {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    div.ocean,
+    div.ocean.two {
+        height: 18em;
+        width: 18em;
+    }
+}
